@@ -1,0 +1,16 @@
+{
+    "firstName": "Ivan5",
+    "lastName": "Ivanov5",
+    "email": "5testemail@gmail.com",
+    "phone": "+380000000000",
+    "fax": "12345",
+    "companyName": "Famous company",
+    "address1": "Derebasivska str. 1",
+    "address2": "Derebasivska str. 2",
+    "city": "Boston",
+    "postCode": "55555",
+    "country": "Ukraine",
+    "zoneId": "Odesa",
+    "loginName": "SomeTestUser5",
+    "password": "SomeTestPassword"
+  }
