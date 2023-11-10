@@ -1,0 +1,64 @@
+[
+    {
+      "selector": "#AccountFrm_firstname",
+      "data": "Ivan9"
+    },
+    {
+      "selector": "#AccountFrm_lastname",
+      "data": "Ivanov9"
+    },
+    {
+      "selector": "#AccountFrm_email",
+      "data": "9testemail@gmail.com"
+    },
+    {
+      "selector": "#AccountFrm_telephone",
+      "data": "+380000000000"
+    },
+    {
+      "selector": "#AccountFrm_fax",
+      "data": "12345"
+    },
+    {
+      "selector": "#AccountFrm_company",
+      "data": "Famous company"
+    },
+    {
+      "selector": "#AccountFrm_address_1",
+      "data": "Derebasivska str. 1"
+    },
+    {
+      "selector": "#AccountFrm_address_2",
+      "data": "Derebasivska str. 2"
+    },
+    {
+      "selector": "#AccountFrm_city",
+      "data": "Boston"
+    },
+    {
+      "selector": "#AccountFrm_postcode",
+      "data": "55555"
+    },
+    {
+      "selector": "#AccountFrm_loginname",
+      "data": "SomeTestUser9"
+    },
+    {
+      "selector": "#AccountFrm_password",
+      "data": "SomeTestPassword"
+    },
+    {
+      "selector": "#AccountFrm_confirm",
+      "data": "SomeTestPassword"
+    },
+    {
+      "selector": "div #AccountFrm_country_id",
+      "data": "Ukraine",
+      "value": "220"
+    },
+    {
+      "selector": "#AccountFrm_zone_id",
+      "data": "Odesa",
+      "value": "3495"
+    }
+  ]
