@@ -1,9 +1,21 @@
 /// <reference types="cypress"/>
- 
+
 import user from '../fixtures/user.json'
+import { faker } from '@faker-js/faker';
+
+
+user.email = faker.internet.email({ provider: 'fakerMail.com'});
+user.loginName = faker.internet.userName();
+user.firstName = faker.person.firstName()
+user.lastName = faker.person.lastName();
+user.fax = faker.phone.number();
+user.phone = faker.phone.number();
+user.companyName = faker.company.name();
+user.postCode = faker.location.zipCode('####');
+
 
 describe('template spec', () => {
-  it.only('Registration', () => {
+  it('Registration', () => {
     cy.visit('https://automationteststore.com/')
 
     cy.get('#customernav').click();
@@ -36,11 +48,11 @@ describe('template spec', () => {
     cy.visit('https://automationteststore.com/')
     
     cy.get('#customernav').click();
-    cy.get('#loginFrm_loginname').type('SomeTestUser');
-    cy.get('#loginFrm_password').type('SomeTestPassword');
+    cy.get('#loginFrm_loginname').type(user.loginName);
+    cy.get('#loginFrm_password').type(user.password);
     cy.get('.btn.btn-orange.pull-right').last().click();
     cy.get('.maintext').should('have.text', ' My Account');
-    cy.get('.subtext').should('have.text', 'Ivan');
+    cy.get('.subtext').should('have.text', user.firstName);
 
   })
 
