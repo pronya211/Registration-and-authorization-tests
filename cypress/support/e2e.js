@@ -17,6 +17,7 @@
 import './commands'
 import './helper'
 import './searchHelper'
+import '@mmisty/cypress-allure-adapter/support';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

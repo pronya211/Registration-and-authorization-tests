@@ -3,6 +3,7 @@
 import user from '../fixtures/user.json'
 import homePage from '../support/pages/HomePage';
 import authorizationPage from '../support/pages/AuthorizationPage';
+import {searchProductWithLetter} from '../support/searchHelper'
 
 
   it.only('Order with helper function', () => {
