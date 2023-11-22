@@ -6,6 +6,7 @@ import homePage from '../support/pages/HomePage';
 import loginPage from '../support/pages/LoginPage';
 import registrationPage from '../support/pages/RegistrationPage';
 import accountPage from '../support/pages/AccountPage';
+import authorizationPage from '../support/pages/AuthorizationPage';
 
 user.email = faker.internet.email({ provider: 'fakerMail.com'});
 user.loginName = faker.internet.userName();
@@ -18,7 +19,7 @@ user.postCode = faker.location.zipCode('####');
 
 
 describe('template spec', () => {
-  it.only('Registration', () => {
+  it('Registration', () => {
     homePage.visit();
 
     cy.log('Opening registration page...')
@@ -43,14 +44,24 @@ describe('template spec', () => {
   })
 
   it('Authirization', () => {
-    cy.visit('https://automationteststore.com/')
+    homePage.visit();
     
-    cy.get('#customernav').click();
-    cy.get('#loginFrm_loginname').type(user.loginName);
-    cy.get('#loginFrm_password').type(user.password);
-    cy.get('.btn.btn-orange.pull-right').last().click();
-    cy.get('.maintext').should('have.text', ' My Account');
-    cy.get('.subtext').should('have.text', user.firstName);
+    cy.log('Opening authorization page...')
+
+    homePage.getHeaderAccountButton().click()
+
+    cy.log('Fill in authorizationn fielsd...');
+
+    authorizationPage.fillAuthorizationFields(user);
+
+    cy.log('Submit authorization form button...');
+
+    authorizationPage.getLoginAccountButton().click();
+
+    cy.log('Verify login name displayed on account page...');
+
+    authorizationPage.getCheckSuccesfulAuthorization().should('have.text', ' My Account');
+    authorizationPage.getCheckNameAfterAuthorization().should('have.text', user.firstName);
 
   })
 
