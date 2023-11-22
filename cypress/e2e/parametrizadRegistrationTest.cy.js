@@ -24,7 +24,7 @@ describe('template spec', () => {
     cy.get('.lock-on-click').click(); 
     cy.get('.maintext').should('have.text', ' Your Account Has Been Created!');
     cy.get('.btn.btn-default.mr10').click();
-    cy.get('.subtext').should('have.text', 'Ivan8');
+    cy.get('.subtext').should('have.text', 'Ivan9');
 
 
   })
